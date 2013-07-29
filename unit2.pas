@@ -1,5 +1,5 @@
 unit Unit2;
-// Меняем кодировку с CP866 на UTF-8
+
 {$mode objfpc}{$H+}
 
 interface
