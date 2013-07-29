@@ -1,3 +1,6 @@
+*.pp
+*.inc
+*.cfg
 *.dcu
 *.~*~
 *.local
