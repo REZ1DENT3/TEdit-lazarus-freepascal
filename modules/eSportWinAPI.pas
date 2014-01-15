@@ -119,7 +119,7 @@ end;
 
 function TES_WinAPI.FullScreenWindow:boolean;inline;
 begin
- Result:=MessageBox(0,'РџРµСЂРµР№С‚Рё РІ РїРѕР»РЅРѕСЌРєСЂР°РЅРЅС‹Р№ СЂРµР¶РёРј?','Р’РѕРїСЂРѕСЃ',MB_YESNO OR MB_ICONQUESTION) <> IDNO;
+ Result:=MessageBox(0,'Перейти в полноэкранный режим?','Вопрос',MB_YESNO OR MB_ICONQUESTION) <> IDNO;
 end;
 
 procedure TES_WinAPI.Messages;

@@ -1,13 +1,12 @@
 unit eSportBased;
 
 {
- * @author REZ1DENT3 (Ğ‘Ğ°Ğ±Ğ¸Ñ‡ĞµĞ² ĞœĞ°ĞºÑĞ¸Ğ¼, ĞšÑƒĞ±Ğ“Ğ£)
+ * @author REZ1DENT3 (Áàáè÷åâ Ìàêñèì, ÊóáÃÓ)
  * @copyright 2013
 }
 
 {$mode objfpc}{$H+}
 
-{$ASMMODE INTEL}
 {$MACRO ON}
 
 {$WARNINGS OFF}
@@ -73,11 +72,11 @@ Const
 implementation
 
 uses
-  Windows,Process,dos,SysUtils;
+  Windows,Process,dos,SysUtils, math;
 
 const
   SizeA = 33;
-  RusA = 'Ğ°Ğ±Ğ²Ğ³Ğ´ĞµÑ‘Ğ¶Ğ·Ğ¸Ğ¹ĞºĞ»Ğ¼Ğ½Ğ¾Ğ¿Ñ€ÑÑ‚ÑƒÑ„Ñ…Ñ†Ñ‡ÑˆÑ‰ÑŠÑÑŒÑÑÑ';
+  RusA = 'àáâãäå¸æçèéêëìíîïğñòóôõö÷øùúşüışÿ';
 
 function FindFiles(Dir: string;EXT:String):TStringList;
 var SearchRec: TSearchRec;
@@ -196,9 +195,9 @@ function UpCase(Str:String):String;overload;inline;
 var i:integer;
 begin
   for i:=1 to length(str) do
-    if str[i] in ['Ğ°'..'Ğ¿'] then
+    if str[i] in ['à'..'ï'] then
       str[i]:=chr(ord(str[i])-32)
-    else if str[i] in ['Ñ€'..' '] then
+    else if str[i] in ['ğ'..' '] then
       str[i]:=chr(ord(str[i])-80)
     else if str[i] in ['a'..'z'] then
       str[i]:=chr(ord(str[i])-32);
@@ -209,9 +208,9 @@ function DownCase(Str:String):String;inline;
 var i:integer;
 begin
   for i:=1 to length(str) do
-    if str[i] in ['Ğ'..'ĞŸ'] then
+    if str[i] in ['À'..'Ï'] then
       str[i]:=chr(ord(str[i])+32)
-    else if str[i] in ['Ğ '..'Ğ¯'] then
+    else if str[i] in ['Ğ'..'ß'] then
       str[i]:=chr(ord(str[i])+80)
     else if str[i] in ['A'..'Z'] then
       str[i]:=chr(ord(str[i])+32);
@@ -276,7 +275,7 @@ end;
 
 operator **(const a,b:Real):Real;inline;
 begin
-  Result:=exp(b*ln(a));
+  Result:=power(a, b);
 end;
 
 procedure Windows1251ToUTF8(var Str: string);inline;

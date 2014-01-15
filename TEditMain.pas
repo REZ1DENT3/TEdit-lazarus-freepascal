@@ -1,10 +1,9 @@
-unit unit1;
+unit TEditMain;
 
 {$mode objfpc}{$H+}
-{$ASMMODE INTEL}
 {$MACRO ON}
 
-//{$DEFINE DEVELOP}
+{$DEFINE DEVELOP}
 {$DEFINE BUILD:='TEdit 3.20.0.7'}
 
 {$IFDEF DEVELOP}
@@ -17,8 +16,17 @@ unit unit1;
 interface
 
 uses
-  Classes,SynHighlighterPas,SynHighlighterPHP,SynHighlighterBat,SynHighlighterCpp,
-  SynEdit,Forms,Dialogs,ExtCtrls,ComCtrls,Menus,StdCtrls;
+  Classes,
+  SynHighlighterPas,
+  SynHighlighterPHP,
+  SynHighlighterBat,
+  SynHighlighterCpp,
+  SynEdit,
+  Forms,Dialogs,
+  ExtCtrls,
+  ComCtrls,
+  Menus,
+  StdCtrls;
 
 type
 

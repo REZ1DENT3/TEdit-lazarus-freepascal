@@ -46,7 +46,7 @@ var
 
 implementation
 
-uses SysUtils,Classes,unit1;
+uses SysUtils,Classes,TEditMain;
 
 {$R *.lfm}
 

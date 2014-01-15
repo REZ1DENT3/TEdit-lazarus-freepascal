@@ -25,7 +25,7 @@ var
   Form3: TForm3;
 
 implementation
-uses SysUtils,Unit1;
+uses SysUtils,TEditMain;
 
 {$R *.lfm}
 
